@@ -4,22 +4,22 @@
 
 -export([fizzbuzz/1,tester/0]).
 
--spec fizzbuzz(Number::[integer()]) -> [string()].
+-spec fizzbuzz(Number::integer()) -> string().
 fizzbuzz(Number) ->
 
-   Result = case (Number rem 3) of
-				0 -> "fizz";
-				_ -> []
- 		    end 
-   			++
-   			case (Number rem 5) of
-				0 -> "buzz";
-				_ -> [] 
-			end,
-	case Result of
-		[]        -> integer_to_list(Number);
-		_FizzBuzz -> Result
-	end.  
+    Result = case (Number rem 3) of
+                 0 -> "fizz";
+                 _ -> []
+             end
+             ++
+             case (Number rem 5) of
+                 0 -> "buzz";
+                 _ -> [] 
+             end,
+    case Result of
+        []        -> integer_to_list(Number);
+        _FizzBuzz -> Result
+    end.  
 
 tester() -> 
 
