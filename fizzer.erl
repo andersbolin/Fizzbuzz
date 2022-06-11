@@ -33,6 +33,6 @@ tester() ->
                       "fizz","88","89","fizzbuzz","91","92","fizz","94","buzz","fizz","97","98",
                       "fizz","buzz"],
 
-	Result = lists:map(fun fizzbuzz/1, lists:seq(1, 100)),
+    Result = lists:map(fun fizzbuzz/1, lists:seq(1, 100)),
     ?assertMatch(Result,ExpectedResult),
-	io:format("~p",[Result]).
+    io:format("~p",[Result]).
